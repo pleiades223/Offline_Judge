@@ -12,7 +12,8 @@ C++とPythonが使えます。
 - MSVC v143 - VS 2022 C++ x64/x86 ビルド ツール
 
 ## Usage
-App/data/にcontestsフォルダを作成し以下のように配置してください。
+Main.cppをビルドしてください。
+App/data/にcontestsフォルダを作成し以下のようにテストケースを配置してください。
 ```
 App/data/contests
 ├── contestname1
