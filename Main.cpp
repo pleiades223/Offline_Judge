@@ -1,4 +1,4 @@
-﻿# include <Siv3D.hpp>
+# include <Siv3D.hpp>
 # include <Windows.h>
 
 struct testcase_result {
@@ -197,7 +197,6 @@ void Judge() {
 	}
 	else if (FileSystem::IsFile(code_path + U".py")) {
 		status.code_path = code_path + U".py";
-		TextWriter{ U"data/judge/main.py" }.write(TextReader{ status.code_path }.readAll());
 		Judge_testcase((LPSTR)"python data/py.py");
 	}
 	else {
@@ -386,7 +385,7 @@ void Main() {
 				sub_tex.drawAt(40, 60, Palette::Black);
 				nfont(U"Submit").drawAt(120, 60, ColorF{ 0.0 });
 			}
-			if (SimpleGUI::Button(U"Cancel Current Judge", { 10,670 }, 220)) {
+			if (SimpleGUI::Button(U"Cancel running judge", { 10,670 }, 220, judge_task.isValid())) {
 				stop = true;
 			}
 		}
@@ -525,7 +524,7 @@ void Main() {
 					nfont(U"No Submissions").drawAt(760, 360, ColorF{ 0.0 });
 				}
 				nfont(Format(current_page + 1) + U"/" + Format(results_pages + 1)).drawAt(760, 685, ColorF{ 0.0 });
-				
+
 				if (MouseL.down()) {
 					const auto detail = submit_table.cellIndex({ 280,40 }, Cursor::Pos());
 					if (detail) {
@@ -549,7 +548,7 @@ void Main() {
 							}
 							Array<testcase_result>temp;
 							JSON result = JSON::Load(U"data/code/" + results_mode + U"/result.json");
-							testcase_table.push_back_row({ U"Case Name",U"Statsus",U"Runtime" });
+							testcase_table.push_back_row({ U"Case Name",U"Status",U"Runtime" });
 							for (auto i : result[U"testcases"]) {
 								testcase_table.push_back_row({ i.key,i.value[U"result"].getString(),i.value[U"runtime"].getString().substr(0,std::min(6,(int)i.value[U"runtime"].getString().size())) });
 							}
