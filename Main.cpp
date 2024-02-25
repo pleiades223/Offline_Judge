@@ -601,7 +601,7 @@ void Main() {
 				detail_table.draw({ 280,70 });
 				nfont(U"Submission #" + submission_detail.submission_ID).draw(30, Arg::leftCenter(280, 50), ColorF{ 0.0 });
 				nfont(U"Code").draw(30, Arg::bottomLeft(280, 330), ColorF{ 0.0 });
-				nfont(U"Compiler Output").draw(30, Arg::bottomLeft(280, 570), ColorF{ 0.0 });
+				nfont(U"Compiler Output").draw(30, Arg::bottomLeft(280, 573), ColorF{ 0.0 });
 				if (SimpleGUI::Button(U"All Submissions", { 565,30 })) {
 					results_mode = U"ALL";
 				}
@@ -612,7 +612,7 @@ void Main() {
 					Clipboard::SetText(detail_compiler.text);
 				}
 				SimpleGUI::TextArea(detail_code, { 280,330 }, { 470,200 }, 100000);
-				SimpleGUI::TextArea(detail_compiler, { 280,570 }, { 470,130 }, 100000);
+				SimpleGUI::TextArea(detail_compiler, { 280,575 }, { 470,130 }, 100000);
 			}
 		}
 	}
