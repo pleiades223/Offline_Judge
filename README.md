@@ -1,5 +1,5 @@
-# Offline_Judge
-![image](https://github.com/pleiades223/Offline_Judge/assets/96909412/3f2da581-4687-4a43-9f47-5f9cafc5c3fc)
+# Offline　Judge
+![image](https://github.com/pleiades223/Offline_Judge/assets/96909412/275c6f24-fa49-4429-801e-ca1069d55149)
 
 ## Overview
 事前にテストケースをダウンロードしておけばオフラインでもジャッジができるなにか。
