@@ -197,6 +197,7 @@ void Judge() {
 	}
 	else if (FileSystem::IsFile(code_path + U".py")) {
 		status.code_path = code_path + U".py";
+		TextWriter{ U"data/judge/main.py" }.write(TextReader{ status.code_path }.readAll());
 		Judge_testcase((LPSTR)"python data/py.py");
 	}
 	else {
