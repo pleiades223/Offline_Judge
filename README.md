@@ -3,15 +3,16 @@
 
 ## Overview
 事前にテストケースをダウンロードしておけばオフラインでもジャッジができるなにか。
+C++とPythonが使えます。
 
 ## Requirement
 - Windows
 - OpenSiv3D v0.6.13
-- Python3
+- Python 3
 - MSVC v143 - VS 2022 C++ x64/x86 ビルド ツール
 
 ## Usage
-App/data/にcontestsフォルダを作成し以下のように配置する
+App/data/にcontestsフォルダを作成し以下のように配置してください。
 ```
 App/data/contests
 ├── contestname1
